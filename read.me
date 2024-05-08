@@ -1,0 +1,11 @@
+alert tcp any any -> any 80 (msg:"netflix.com access"; content:"GET /"; content:"Host: "; content:"netflix.com"; sid:10002; rev:1;)
+
+TLS hand-Shake > Client Hello > Extension > SNI Field
+
+isdataat:!1,relative;, isdataat이 relative 옵션으로 0번째부터 순차적으로 값이 1이 아닌 것을 매칭
+
+Server Name List Length: [2byte]
+Server Name Entry:
+  - Server Name Type: 0x00 [1byte]
+  - Server Name Length [2byte]
+  - Server Name Data: "example.com" (실제 호스트명) [variable]
